@@ -20,6 +20,10 @@
         font-family: Georgia, serif;
       }
 
+      #cta {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+      }
+
       #cover {
         background: url("images/cover-bg.jpg") no-repeat;
         background-size: cover;
@@ -29,8 +33,12 @@
         position: relative;
       }
 
-      #leadin, #synopsis, #stream {
+      #leadin, #synopsis {
         padding: 50px 0 0 0;
+      }
+
+      #stream {
+        padding: 50px 0 50px 0;
       }
     </style>
   </head>
@@ -49,9 +57,9 @@
                   <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                   </li>
-                  <li class="nav-item">
+                  <!--li class="nav-item">
                     <a class="nav-link" href="#">About</a>
-                  </li>
+                  </li-->
                 </ul>
               </div>
             </nav>
@@ -102,52 +110,58 @@
     <section id="stream">
       <div class="container">
         <div class="row">
-          <div class="col-6">
-            <p>You can listen on your favourite music streaming platform now.</p>
+          <div class="col-12 text-center">
+            <p id="cta"><strong>Listen on your favourite music streaming platform now</strong></p>
           </div>
-          <div class="col-6">
-            <div class="row">
-              <div class="col-4 mt-3">
-                <a href="https://open.spotify.com/artist/6UduqXT8b0qRtTENi3yyQJ?si=_09oVaHPSZWPeAZL--g3nQ">
-                  <img class="img-fluid" src="images/spotify.png">
-                </a>
-              </div>
-              <div class="col-4 mt-3">
-                <a href="https://music.apple.com/us/album/carol-in-a-box/1487321078?uo=4&app=itunes&at=1001lry3&ct=dashboard">
-                  <img class="img-fluid" src="images/itunes.png">
-                </a>
-              </div>
-              <div class="col-4 mt-3">
-                <a href="https://www.youtube.com/playlist?list=OLAK5uy_kCqvz2J5XT9SlGdAw37GfFRyIP8PQ1lRE">
-                  <img class="img-fluid" src="images/youtube.png">
-                </a>
-              </div>
-              <div class="col-4 mt-3">
-                <a href="https://music.apple.com/dk/album/carol-in-a-box/1487321078">
-                  <img class="img-fluid" src="images/apple-music.png">
-                </a>
-              </div>
-              <div class="col-4 mt-3">
-                <a href="https://play.google.com/store/music/album/Klip_Klap_Carol_in_a_Box?id=Btccjr3pgzylgwfbiafjcvxlode">
-                  <img class="img-fluid" src="images/google-play.png">
-                </a>
-              </div>
-              <div class="col-4 mt-3">
-                <a href="https://www.deezer.com/album/118334922">
-                  <img class="img-fluid" src="images/deezer.png">
-                </a>
-              </div>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-1 d-md-none"></div>
+          <div class="col-md-2 col-5 mt-3">
+            <a href="https://open.spotify.com/artist/6UduqXT8b0qRtTENi3yyQJ?si=_09oVaHPSZWPeAZL--g3nQ">
+              <img class="img-fluid" src="images/spotify.png">
+            </a>
           </div>
+          <div class="col-md-2 col-5 mt-3">
+            <a href="https://music.apple.com/us/album/carol-in-a-box/1487321078?uo=4&app=itunes&at=1001lry3&ct=dashboard">
+              <img class="img-fluid" src="images/itunes.png">
+            </a>
+          </div>
+          <div class="col-1 d-md-none"></div>
+
+          <div class="col-1 d-md-none"></div>
+          <div class="col-md-2 col-5 mt-3">
+            <a href="https://www.youtube.com/playlist?list=OLAK5uy_kCqvz2J5XT9SlGdAw37GfFRyIP8PQ1lRE">
+              <img class="img-fluid" src="images/youtube.png">
+            </a>
+          </div>
+          <div class="col-md-2 col-5 mt-3">
+            <a href="https://music.apple.com/dk/album/carol-in-a-box/1487321078">
+              <img class="img-fluid" src="images/apple-music.png">
+            </a>
+          </div>
+          <div class="col-1 d-md-none"></div>
+
+          <div class="col-1 d-md-none"></div>
+          <div class="col-md-2 col-5 mt-3">
+            <a href="https://play.google.com/store/music/album/Klip_Klap_Carol_in_a_Box?id=Btccjr3pgzylgwfbiafjcvxlode">
+              <img class="img-fluid" src="images/google-play.png">
+            </a>
+          </div>
+          <div class="col-md-2 col-5 mt-3">
+            <a href="https://www.deezer.com/album/118334922">
+              <img class="img-fluid" src="images/deezer.png">
+            </a>
+          </div>
+          <div class="col-1"></div>
         </div> <!--/row-->
       </div> <!--/container-->
     </section>
 
-    <section id="purchase">
+    <!--section id="purchase">
       <div class="container">
         <div class="row">
           <div class="col-8 col-lg-2 mt-3 text-center">
-            <!--form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="hidden" name="cmd" value="_xclick">
               <input type="hidden" name="business" value="sl@mailicio.us">
               <input type="hidden" name="lc" value="US">
@@ -157,14 +171,14 @@
               <input type="hidden" name="button_subtype" value="services">
               <input type="hidden" name="no_note" value="0">
               <input type="hidden" name="shipping" value="5.00">
-              <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest"-->
+              <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
               <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <!--img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form-->
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </section-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
